@@ -209,7 +209,9 @@ body:hover > #trailer {
 
 
 
-
+.house-icon-time-image {
+  left: -160px;
+}
 
 
 
@@ -291,7 +293,7 @@ body:hover > #trailer {
 /*--for scrolling to service selection*/
 #scroll-container{
   position: absolute;
-  padding-top: 350vh;
+  padding-top: 370vh;
 }
 
 
@@ -432,12 +434,12 @@ body:hover > #trailer {
 }
 .service-text:hover:before, .service-text:hover:after {
   animation: radius-inc;
-  animation-duration: 0.1s;
+  animation-duration: 0.3s;
   animation-timing-function:linear;
   animation-fill-mode: forwards;
 }
 .ServiceBox:hover {
-  animation: radius-inc;
+  animation: radius-inc2;
   animation-duration: 0.5s;
   animation-fill-mode: forwards ;
 }
@@ -450,20 +452,23 @@ body:hover > #trailer {
   to{flex-grow: 1;}
 }
 @keyframes radius-inc {
-  to{border-radius: 130px;  transform: scale(70%) translateY(30px);}
+  to{border-radius: 130px;  transform: scale(70%) translateY(30px); }
+}
+@keyframes radius-inc2 {
+  to{border-radius: 130px;  transform: scale(70%) translateY(30px); }
 }
 @keyframes radius-dec {
   to{border-radius: 30px;  transform: scale(100%) translateY(0px);}
 }
 
 @keyframes shrink-after {
-  from{border-radius:130px;transform: scale(70%) translateY(30px)}
-  to{border-radius: 30px;transform: scale(100%) translateY(0px)}
+  from{border-radius:130px;transform: scale(70%) translateY(30px);}
+  to{border-radius: 30px;transform: scale(100%) translateY(0px);}
 }
 
 
 
-.ServiceBox::after {
+#electric-box::after {
   position: absolute;
   content: "";
   left: -10;
@@ -474,10 +479,68 @@ body:hover > #trailer {
   border-radius: 40px;
   margin: 0 auto;
   transform: scale(0.8);
+  background-size: 200%;
   /* filter: blur(7vmax); */
-  background-image: linear-gradient(
-    160deg
-    ,  rgba(84,35,98,1), rgba(5,0,4,1),rgba(84,35,98,1));
+  background: linear-gradient(
+    to right
+    ,  #F2CB05, #A64029);
+
+}
+
+#water-box::after {
+  position: absolute;
+  content: "";
+  left: -10;
+  right: -10;
+  z-index: -1;
+  height: 130%;
+  width: 130%;
+  border-radius: 40px;
+  margin: 0 auto;
+  transform: scale(0.8);
+
+  /* filter: blur(7vmax); */
+  background: linear-gradient(
+    to right
+    ,  #13547a, #80d0c7);
+
+}
+
+#home-box::after {
+  position: absolute;
+  content: "";
+  left: -10;
+  right: -10;
+  z-index: -1;
+  height: 130%;
+  width: 130%;
+  border-radius: 40px;
+  margin: 0 auto;
+  transform: scale(0.8);
+
+  /* filter: blur(7vmax); */
+  background: linear-gradient(
+    to right
+    , #5a7340, #192617);
+
+}
+
+#comp-box::after {
+  position: absolute;
+  content: "";
+  left: -10;
+  right: -10;
+  z-index: -1;
+  height: 130%;
+  width: 130%;
+  border-radius: 40px;
+  margin: 0 auto;
+  transform: scale(0.8);
+
+  /* filter: blur(7vmax); */
+  background: linear-gradient(
+    to right
+    , rgb(66, 19, 109), black);
 
 }
 
@@ -519,6 +582,7 @@ body:hover > #trailer {
 }
 #sec-1 {
   background-color: #00c23d;
+  left: 50px;
 }
 #about-1 {
   
